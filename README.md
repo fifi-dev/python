@@ -73,8 +73,8 @@ Contributions are what make the open source community such an amazing place to l
 
 - BAZANA NTOMO Fideline `https://github.com/fifi-dev`
 
-   - [ ] ✉️ For any question you can join me: `fideline_bzn@yahoo.com`
-   - [ ]✉️ Pour toute question vous pouvez me joindre via l'adresse : `fideline_bzn@yahoo.com`
+   - ✉️ For any question you can join me: `fideline_bzn@yahoo.com`
+   - ✉️ Pour toute question vous pouvez me joindre via l'adresse : `fideline_bzn@yahoo.com`
 
 
 ## 📜 Licence
