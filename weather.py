@@ -59,7 +59,7 @@ def get_weather_data(url):
         tempMin = temp[2].text
 
         jours_suivants.append(
-            {"jours": nom, "weather": weather, "tempMin": tempMin, "tempMax": tempMax})
+            {"nom": nom, "weather": weather, "tempMin": tempMin, "tempMax": tempMax})
     # on ajoute cela au résultat
     result['jours_suivants'] = jours_suivants
     return result
@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
  # Affichgage des données
     print("Weather for:", data["ville"])
-    print("Now:", data["timestamp"])
+    print("Actuellement:", data["timestamp"])
     print(f"Temperature now: {data['temp']}°C")
     print("Description:", data['weather_now'])
     print("Precipitation:", data["precipitation"])
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     print("Wind:", data["wind"])
     print("Jours suivants:")
     for meteo in data["jours_suivants"]:
-        print("="*40, meteo["nom"], "="*40)
+        print("="*20, meteo["nom"], "="*20)
         print("Description:", meteo["weather"])
-        print(f" temperature Maximum: {meteo['max_temp']}°C")
-        print(f" temperature Minimum: {meteo['min_temp']}°C")
+        print(f" temperature Maximum: {meteo['tempMax']}°C")
+        print(f" temperature Minimum: {meteo['tempMin']}°C")
