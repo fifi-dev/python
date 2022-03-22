@@ -12,7 +12,7 @@ requests_cache.install_cache('demo_cache')
 
 #ville = input("Quel est votre ville ").strip()
 
-userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36"
+userAgent = "Mozilla/5.0 (ventows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36"
 acceptLanguage = "en-US,en;q=0.5"
 
 
@@ -40,7 +40,7 @@ def get_weather_data(url):
     #  % d'humidité
     result['humidity'] = soup.find("span", attrs={"id": "wob_hm"}).text
     # vent
-    result['wind'] = soup.find("span", attrs={"id": "wob_ws"}).text
+    result['vent'] = soup.find("span", attrs={"id": "wob_ws"}).text
     # precipitation
     result['precipitation'] = soup.find("span", attrs={"id": "wob_pp"}).text
 
@@ -81,13 +81,13 @@ if __name__ == "__main__":
     data = get_weather_data(URL)
 
  # Affichgage des données
-    print("Weather for:", data["ville"])
+    print("Ville:", data["ville"])
     print("Actuellement:", data["timestamp"])
-    print(f"Temperature now: {data['temp']}°C")
+    print(f"Temprature Actuelle: {data['temp']}°C")
     print("Description:", data['weather_now'])
     print("Precipitation:", data["precipitation"])
-    print("Humidity:", data["humidity"])
-    print("Wind:", data["wind"])
+    print("Humidité:", data["humidity"])
+    print("Vent:", data["vent"])
     print("Jours suivants:")
     for meteo in data["jours_suivants"]:
         print("="*20, meteo["nom"], "="*20)
