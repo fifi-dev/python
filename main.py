@@ -14,12 +14,18 @@ ville = input("Quel est votre ville ").strip()
 
 # url dynamique vers notre page web
 
+# specify the url
+urlpage = "http://api.openweathermap.org/data/2.5/weather?q=" + ville + \
+    "&appid=18510638b7f670070f0c8aff37d87f2b&units=metric&lang=fr"
 
-def get_url_page(ville):
-    page = 'https://www.google.com/search?q=meteo' + ville
-    page = requests.get(page).text
-    # On parse le html en utilisant beautiful soup et on le stocke dans la variable 'soup'
-    return BeautifulSoup(page, 'html.parser')
+# query the website and return the html to the variable 'page'
+page = requests.get(urlpage).text
+# parse the html using beautiful soup and store in variable 'soup'
+soup = BeautifulSoup(page, 'html.parser')
+
+print(soup)
 
 
-print(get_url_page(ville))
+weather = soup["weather"]
+
+print(weather)
