@@ -22,18 +22,19 @@ This project was carried out with the use of the following languages :
 - [ ] Install Python3 : `https://www.python.org/downloads/ `
 
 
-- [ ] requests
+   - [ ] requests
 
 ```sh
-   pip3 install requests
-
-    ```
+   pip3 install requests_cache
+   ```
     
    - [ ] BeautifulSoup
 
 ```sh
    pip3 install BeautifulSoup
    ```
+   
+   
    - [ ] requests_cache
 
 ```sh
