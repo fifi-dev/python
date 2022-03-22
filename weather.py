@@ -18,6 +18,7 @@ acceptLanguage = "en-US,en;q=0.5"
 
 def get_weather_data(url):
     session = requests.Session()
+    # Retourne le headers sous forme de dictionnaire
     session.headers['User-Agent'] = userAgent
     session.headers['Accept-Language'] = acceptLanguage
     session.headers['Content-Language'] = acceptLanguage
@@ -70,8 +71,8 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(
         description="Script permettant de voir la météo via Google Weather")
-    parser.add_argument("ville", nargs="?", help="""Region to get weather for, must be available region.
-                                        Default is your current location determined by your IP Address""", default="")
+    parser.add_argument("ville", nargs="?", help="""Region de la météo que vous souhaitez consulter.
+                                        la localisation par defaut est celle de votre adresse IP""", default="")
     # parse arguments
     args = parser.parse_args()
     ville = args.ville
