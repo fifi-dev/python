@@ -27,7 +27,8 @@ This project was carried out with the use of the following languages :
 ```sh
    pip3 install requests
 
-   
+    ```
+    
    - [ ] BeautifulSoup
 
 ```sh
